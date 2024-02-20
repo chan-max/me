@@ -19,11 +19,8 @@
 **在职状态** : 离职随时入职
 
 <br>
-<br>
 
 <h1>技术栈</h1>
-
-<br>
 
 - 熟悉 js , ts，nodejs , vue2 , vue3 框架及其全家桶
 - 熟悉常见组件库开源库，jquery，bootstrap，element, ant-design等
@@ -34,7 +31,7 @@
 - 了解 vscode ，git ， apifox , vconsole 等调试测试工具 ,navicat 等常用开发工具
 
 <br>
-<br>
+
 <h1>工作及项目经历</h1>
 
 **公司：** 大连快学教育软件开发公司 &emsp;&emsp; **职位：** 前端研发 &emsp;&emsp;**时间：** 2023.3 -2024.2

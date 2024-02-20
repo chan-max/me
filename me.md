@@ -63,10 +63,8 @@
 </div>
 
 <br>
-<br>
 
 <h1>技术栈</h1>
-<br>
 
 - 熟练 js , ts，nodejs , vue2，3全家桶
 - 熟悉开源生态，熟悉各种常见开源库，包括但不限于（ant-design，element，vant，ionic等）
@@ -75,11 +73,10 @@
 - 了解 vscode ，git ， apifox  等开发调试测试工具 ,navicat xcode，android studio 等等常用开发工具
 
 <br>
-<br>
+
 <h1>工作及项目经历</h1>
 
 **公司:** 大连快学教育软件开发公司 &emsp;&emsp; **职位:：** 前端研发 &emsp;&emsp; **时间:** 2023.3 -2024.2 &emsp;&emsp;  **离职原因:** 经营状态不佳，寻求新的发展
-
 
 **项目简介：** 在线教育培训及考试平台, 主要服务人群学校及企业
 
@@ -108,7 +105,6 @@
 - 配合开发组长开发公司政务办公系统，开发公司自用低代码平台 ，负责诸多基础组件的封装
 - 开发大屏数据可视化组件库 , 基于 echart , threejs 封装多种炫酷表格及地图组件 
 - 维护旧项目
-
 <br/>
 
 ---
@@ -126,12 +122,9 @@
 
 # 我的项目
 
-**衣设网**
+**衣设网** 
 
-**项目介绍：** 这是一个正在开发中的开放式服装设计和交易平台
-
-**代码：** https://github.com/chan-max/1s/tree/dev
-
+**项目介绍：** 这是一个正在开发中的开放式服装设计和交易平台 &emsp;&emsp;**代码：** https://github.com/chan-max/1s/tree/dev
 
 **技术栈:**  vue3全家桶 ，threejs ，axios ，nodejs ，koa， ts， sequelize，mysql，redis ，linux ，准本引入mongodb
 
@@ -141,13 +134,9 @@
 
 **crush**
 
-**项目介绍：** 这是一个类似vue的视图框架
+**项目介绍：** 这是一个类似vue的视图框架 &emsp;&emsp; **代码：** https://github.com/chan-max/Crush &emsp;&emsp; **技术栈：** 原生js 
 
-**代码：** https://github.com/chan-max/Crush
-
-**技术栈：** 原生js 
-
-**基本功能：** vue的绝大部分功能，模版编译，虚拟dom，响应式渲染，生命周期钩子，条见渲染，列表渲染
+**基本功能：** vue的绝大部分功能，模版编译，虚拟dom，响应式渲染，生命周期钩子，条件渲染，列表渲染
 
 **技术亮点：** 基于css预处理语言模板的虚拟cssom，可以直接在css模板中使用 js 变量
 
