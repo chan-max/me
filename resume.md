@@ -10,7 +10,7 @@
 
 **邮&emsp;&emsp;箱：** jackieontheway666@gmail.com
 
-**Git Hub  ：** https://github.com/chan-max
+**GitHub地址  ：** https://github.com/chan-max
 
 **专&ensp;&ensp;&ensp;&ensp;业：** &ensp;大连交通大学 软件工程 & 信息系统与信息管理 （2016 - 2021）
 

@@ -41,7 +41,7 @@
         <div class="content"> 前后端，移动端 </div>
     </div>
     <div class="item">
-        <div class="label">邮&emsp;&emsp;箱</div>
+        <div class="label">邮&emsp;&emsp;箱:</div>
         <div class="content">jackieontheway666@gmail.com</div>
     </div>
     <div class="item">
@@ -53,7 +53,7 @@
         <div class="content">187 4253 9196</div>
     </div>
     <div class="item">
-        <div class="label">Github:</div>
+        <div class="label">Github &nbsp;&nbsp;:</div>
         <div class="content">https://github.com/chan-max</div>
     </div>
         <div class="item">
