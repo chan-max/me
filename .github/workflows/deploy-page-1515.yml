@@ -18,10 +18,22 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f "package-lock.json" ]; then
+            npm ci
+          elif [ -f "package.json" ]; then
+            npm install
+          else
+            echo "No package.json found, skipping dependency installation"
+          fi
 
       - name: Update download links
-        run: npm run update-links
+        run: |
+          if [ -f "package.json" ] && npm run | grep -q "update-links"; then
+            npm run update-links
+          else
+            echo "update-links script not found, skipping"
+          fi
 
       - name: Deploy Page to 1515 Directory
         uses: appleboy/scp-action@v0.1.7
