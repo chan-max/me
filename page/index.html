@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈政 - 个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f8f9fa;
+            font-size: 12px;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            min-height: 297mm;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 15px;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .name {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 1em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .main-content {
+            padding: 25px 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #667eea;
+            min-width: 70px;
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 3px 0;
+            color: #666;
+            position: relative;
+            padding-left: 15px;
+            font-size: 0.9em;
+        }
+
+        .skill-list li::before {
+            content: '▸';
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 3px solid #667eea;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .company-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .position {
+            color: #667eea;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .duration {
+            color: #666;
+            font-size: 0.8em;
+            background: #e9ecef;
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+
+        .project-description {
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            font-size: 0.9em;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+
+        .work-content {
+            list-style: none;
+        }
+
+        .work-content li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 18px;
+            line-height: 1.3;
+            font-size: 0.85em;
+        }
+
+        .work-content li::before {
+            content: '•';
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .project-item {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 3px solid #764ba2;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.8em;
+            background: #e9ecef;
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+
+        .about-me {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 3px solid #764ba2;
+        }
+
+        .about-me p {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            font-size: 1em;
+        }
+
+        /* 紧凑布局优化 */
+        .compact-section {
+            margin-bottom: 20px;
+        }
+
+        .compact-item {
+            margin-bottom: 12px;
+        }
+
+        /* 打印优化 */
+        @media print {
+            body {
+                background: white;
+                font-size: 10px;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: none;
+                margin: 0;
+                min-height: auto;
+            }
+
+            .section-title {
+                page-break-after: avoid;
+                font-size: 1.2em;
+                margin-bottom: 12px;
+            }
+
+            .experience-item,
+            .project-item {
+                page-break-inside: avoid;
+                margin-bottom: 12px;
+                padding: 15px;
+            }
+
+            .header {
+                padding: 20px 25px;
+            }
+
+            .main-content {
+                padding: 20px 25px;
+            }
+
+            .avatar {
+                width: 70px;
+                height: 70px;
+            }
+
+            .name {
+                font-size: 1.8em;
+            }
+
+            .title {
+                font-size: 0.9em;
+            }
+
+            .contact-info {
+                gap: 10px;
+            }
+
+            .contact-item {
+                padding: 4px 8px;
+                font-size: 0.8em;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 8px;
+            }
+
+            .skill-category {
+                padding: 12px;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-info">
+                <img src="avatar.png" alt="陈政头像" class="avatar">
+                <h1 class="name">陈政</h1>
+                <p class="title">前端开发工程师 / 全栈开发者</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧 jackieontheway666@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱 187 4253 9196</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>💬 18742539196</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🐙 chan-max</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="section compact-section">
+                <h2 class="section-title">基本信息</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">姓名：</span>
+                        <span class="info-content">陈政</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">性别：</span>
+                        <span class="info-content">男</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">生日：</span>
+                        <span class="info-content">1999.01.12</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">学历：</span>
+                        <span class="info-content">大连交通大学本科</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">专业：</span>
+                        <span class="info-content">软件工程 & 信息系统</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">所在地：</span>
+                        <span class="info-content">辽宁大连</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">求职方向：</span>
+                        <span class="info-content">前后端、移动端开发</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">在职状态：</span>
+                        <span class="info-content">离职随时入职</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section compact-section">
+                <h2 class="section-title">技术栈</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>前端技术</h4>
+                        <ul class="skill-list">
+                            <li>JavaScript / TypeScript</li>
+                            <li>Vue2 / Vue3 全家桶</li>
+                            <li>React / Angular</li>
+                            <li>HTML5 / CSS3 / SCSS</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>移动端开发</h4>
+                        <ul class="skill-list">
+                            <li>Capacitor 跨平台开发</li>
+                            <li>Android / iOS 应用开发</li>
+                            <li>Ionic 框架</li>
+                            <li>移动端UI组件库</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>后端技术</h4>
+                        <ul class="skill-list">
+                            <li>Node.js / Express / Koa</li>
+                            <li>MySQL / Sequelize ORM</li>
+                            <li>Redis 缓存</li>
+                            <li>Linux 服务器管理</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>开发工具</h4>
+                        <ul class="skill-list">
+                            <li>VS Code / Git</li>
+                            <li>Webpack / Vite</li>
+                            <li>Postman / Apifox</li>
+                            <li>Navicat / Xcode / Android Studio</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section compact-section">
+                <h2 class="section-title">工作经历</h2>
+
+                <div class="experience-item compact-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="company-name">大连恒优新跨境电商</h3>
+                            <p class="position">前端开发工程师</p>
+                        </div>
+                        <span class="duration">2024.3 - 至今</span>
+                    </div>
+                    <p class="project-description">跨境电商平台，专注于海外市场拓展和商品销售</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue2</span>
+                        <span class="tech-tag">Vue3</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Vant</span>
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">Capacitor</span>
+                    </div>
+                    <ul class="work-content">
+                        <li>负责跨境电商平台的前端开发和维护</li>
+                        <li>开发移动端H5页面和混合应用</li>
+                        <li>使用Capacitor开发跨平台移动应用</li>
+                        <li>优化商品展示和购物流程的用户体验</li>
+                        <li>参与多语言国际化功能的开发</li>
+                        <li>开发订单管理和数据分析功能</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item compact-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="company-name">大连融讯</h3>
+                            <p class="position">前端开发工程师</p>
+                        </div>
+                        <span class="duration">2023.3 - 2024.2</span>
+                    </div>
+                    <p class="project-description">金融科技公司，专注于金融系统开发和数字化转型</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue3</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Element Plus</span>
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">Pinia</span>
+                        <span class="tech-tag">ECharts</span>
+                    </div>
+                    <ul class="work-content">
+                        <li>负责公司核心金融系统的前端开发工作</li>
+                        <li>使用Vue3 + TypeScript技术栈重构现有系统</li>
+                        <li>开发金融数据可视化大屏和报表系统</li>
+                        <li>优化系统性能，提升用户体验</li>
+                        <li>参与金融业务模块的设计和开发</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item compact-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="company-name">大连快学教育软件开发公司</h3>
+                            <p class="position">前端研发工程师</p>
+                        </div>
+                        <span class="duration">2022.6 - 2023.2</span>
+                    </div>
+                    <p class="project-description">在线教育培训及考试平台，主要服务人群学校及企业</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue2</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Ant Design</span>
+                        <span class="tech-tag">ECharts</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">Ace.js</span>
+                    </div>
+                    <ul class="work-content">
+                        <li>主导从0到1的前端技术框架搭建，参与技术选型</li>
+                        <li>使用Vue2技术架构重构原部分PHP项目代码，通过预加载和编译的方式解决高并发问题</li>
+                        <li>完成登录验证码、人脸识别、大量相关页面优化和列表部分的展示与处理</li>
+                        <li>部分重构原项目旧富文本编辑器，拓展原功能，增加代码块的插入、代码高亮</li>
+                        <li>配合客户端外包人员，将原Web项目集成客户端</li>
+                        <li>参与开发基于Ace.js和WebSocket的在线编程题</li>
+                        <li>参与系统的交互及功能设计、技术选型、框架设计，修复系统原有的诸多Bug</li>
+                        <li>参与探索AI命题的方式</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item compact-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="company-name">大连倚天软件开发公司</h3>
+                            <p class="position">前端研发工程师</p>
+                        </div>
+                        <span class="duration">2021.7 - 2023.2</span>
+                    </div>
+                    <p class="project-description">多数为政府项目，有自研的后台管理系统、低代码平台</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue2</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Element UI</span>
+                        <span class="tech-tag">ECharts</span>
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">Animate.css</span>
+                    </div>
+                    <ul class="work-content">
+                        <li>配合开发组长开发公司政务办公系统，开发公司自用低代码平台</li>
+                        <li>负责诸多基础组件的封装</li>
+                        <li>参与开发诸多政府官网，多数为偏UI方面</li>
+                        <li>开发大屏数据可视化组件库，基于ECharts、Three.js封装多种炫酷表格及地图组件</li>
+                        <li>维护旧项目</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item compact-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="company-name">大连智明软件开发公司</h3>
+                            <p class="position">实习软件研发</p>
+                        </div>
+                        <span class="duration">2020.12 - 2021.06</span>
+                    </div>
+                    <p class="project-description">参与维护原Angular前端项目，使用Python处理Excel文件数据</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">UiPath</span>
+                        <span class="tech-tag">VBScript</span>
+                    </div>
+                    <ul class="work-content">
+                        <li>参与维护其原Angular前端项目</li>
+                        <li>使用Python处理Excel文件数据</li>
+                        <li>使用UiPath进行网络爬虫爬取网站数据</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section compact-section">
+                <h2 class="section-title">个人项目</h2>
+
+                <div class="project-item compact-item">
+                    <div class="project-header">
+                        <h3 class="project-name">衣设网</h3>
+                        <a href="https://github.com/chan-max/1s/tree/dev" class="project-link" target="_blank">查看代码</a>
+                    </div>
+                    <p class="project-description">这是一个正在开发中的开放式服装设计和交易平台</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue3</span>
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Koa</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <ul class="work-content">
+                        <li>核心功能为基于Three.js和3D建模的服装模型组合</li>
+                        <li>PC端用来建模，移动端用来查看和交易</li>
+                        <li>基本的登录注册用户管理，类抖音的无线滑动、点赞、评论转发功能</li>
+                        <li>正在开发聊天发消息相关的功能</li>
+                        <li>预计会有积分系统、交易系统和一些复杂的交互功能</li>
+                    </ul>
+                </div>
+
+                <div class="project-item compact-item">
+                    <div class="project-header">
+                        <h3 class="project-name">Crush</h3>
+                        <a href="https://github.com/chan-max/Crush" class="project-link" target="_blank">查看代码</a>
+                    </div>
+                    <p class="project-description">前端视图框架</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">原生JavaScript</span>
+                        <span class="tech-tag">MVVM架构</span>
+                        <span class="tech-tag">虚拟DOM</span>
+                        <span class="tech-tag">响应式渲染</span>
+                    </div>
+                    <ul class="work-content">
+                        <li>实现MVVM架构模式</li>
+                        <li>模版编译、虚拟DOM、响应式渲染</li>
+                        <li>生命周期钩子、条件渲染、列表渲染</li>
+                        <li>基于CSS预处理语言模板的虚拟CSSOM，可以直接在CSS模板中使用JavaScript变量</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section compact-section">
+                <h2 class="section-title">关于我</h2>
+                <div class="about-me">
+                    <p>喜欢独立开发，善于独立思考，善于解决复杂问题，善于高效沟通</p>
+                    <p>对前端开源有浓厚兴趣，善于发现好用的开源库与工具</p>
+                    <p>善于使用AI提高工作效率</p>
+                    <p>良好的设计审美，崇尚大道至简，善于纠结应用的美感和体验</p>
+                    <p>对垃圾代码、垃圾架构深恶痛绝 ❌</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>感谢您的阅读，如有兴趣欢迎与我联系 😊</p>
+        </footer>
+    </div>
+</body>
+
+</html>
