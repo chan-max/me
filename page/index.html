@@ -271,6 +271,52 @@
             border-radius: 12px;
         }
 
+        .project-links {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .project-links h4 {
+            color: #2c3e50;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .project-link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-link-list li {
+            margin-bottom: 8px;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+
+        .project-link-list strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .project-link-list .project-link {
+            display: inline-block;
+            margin-left: 5px;
+            background: #667eea;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 0.75em;
+            transition: background-color 0.2s;
+        }
+
+        .project-link-list .project-link:hover {
+            background: #5a6fd8;
+            text-decoration: none;
+        }
+
         .about-me {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 18px;
@@ -387,7 +433,7 @@
             <div class="profile-info">
                 <img src="avatar.png" alt="陈政头像" class="avatar">
                 <h1 class="name">陈政</h1>
-                <p class="title">前端开发工程师 / 全栈开发者</p>
+                <p class="title">前端开发 / 全栈开发 / 脚本开发</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📧 jackieontheway666@gmail.com</span>
@@ -396,10 +442,13 @@
                         <span>📱 187 4253 9196</span>
                     </div>
                     <div class="contact-item">
+                        <span>📱 132 2422 9196</span>
+                    </div>
+                    <div class="contact-item">
                         <span>💬 18742539196</span>
                     </div>
                     <div class="contact-item">
-                        <span>🐙 chan-max</span>
+                        <span>🔗 <a href="http://github.com/chan-max" target="_blank" style="color: white; text-decoration: none;">github.com/chan-max</a></span>
                     </div>
                 </div>
             </div>
@@ -437,10 +486,6 @@
                         <span class="info-label">求职方向：</span>
                         <span class="info-content">前后端、移动端开发</span>
                     </div>
-                    <div class="info-item">
-                        <span class="info-label">在职状态：</span>
-                        <span class="info-content">离职随时入职</span>
-                    </div>
                 </div>
             </section>
 
@@ -450,37 +495,58 @@
                     <div class="skill-category">
                         <h4>前端技术</h4>
                         <ul class="skill-list">
-                            <li>JavaScript / TypeScript</li>
                             <li>Vue2 / Vue3 全家桶</li>
-                            <li>React / Angular</li>
-                            <li>HTML5 / CSS3 / SCSS</li>
+                            <li>Nuxt.js 全栈框架</li>
+                            <li>TypeScript</li>
+                            <li>SCSS / CSS预处理器</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h4>移动端开发</h4>
                         <ul class="skill-list">
                             <li>Capacitor 跨平台开发</li>
-                            <li>Android / iOS 应用开发</li>
                             <li>Ionic 框架</li>
+                            <li>UniApp 跨平台开发</li>
                             <li>移动端UI组件库</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>桌面端开发</h4>
+                        <ul class="skill-list">
+                            <li>Electron 客户端开发</li>
+                            <li>跨平台桌面应用</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h4>后端技术</h4>
                         <ul class="skill-list">
                             <li>Node.js / Express / Koa</li>
+                            <li>NestJS 企业级框架</li>
                             <li>MySQL / Sequelize ORM</li>
                             <li>Redis 缓存</li>
                             <li>Linux 服务器管理</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h4>开发工具</h4>
+                        <h4>自动化与脚本</h4>
                         <ul class="skill-list">
-                            <li>VS Code / Git</li>
-                            <li>Webpack / Vite</li>
-                            <li>Postman / Apifox</li>
-                            <li>Navicat / Xcode / Android Studio</li>
+                            <li>Node.js 自动化脚本</li>
+                            <li>Shell 脚本开发</li>
+                            <li>Figma 设计工具</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>DevOps & 部署</h4>
+                        <ul class="skill-list">
+                            <li>CI/CD 流水线搭建</li>
+                            <li>GitHub Actions</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI 开发工具</h4>
+                        <ul class="skill-list">
+                            <li>Cursor AI 编程助手</li>
+                            <li>Gemini CLI 命令行工具</li>
                         </ul>
                     </div>
                 </div>
@@ -495,7 +561,7 @@
                             <h3 class="company-name">大连恒优新跨境电商</h3>
                             <p class="position">前端开发工程师</p>
                         </div>
-                        <span class="duration">2024.3 - 至今</span>
+                        <span class="duration">2024.2 - 至今</span>
                     </div>
                     <p class="project-description">跨境电商平台，专注于海外市场拓展和商品销售</p>
                     <div class="tech-stack">
@@ -514,6 +580,14 @@
                         <li>参与多语言国际化功能的开发</li>
                         <li>开发订单管理和数据分析功能</li>
                     </ul>
+                    <div class="project-links">
+                        <h4>项目地址：</h4>
+                        <ul class="project-link-list">
+                            <li><strong>ERP系统：</strong><a href="https://www.erp.iuufu.com" target="_blank" class="project-link">https://www.erp.iuufu.com</a> - 完全开发</li>
+                            <li><strong>门户网站：</strong><a href="https://iuufu.com/" target="_blank" class="project-link">https://iuufu.com/</a> - 参与开发和设计</li>
+                            <li><strong>线上商城：</strong><a href="https://mall.iuufu.com/?v=ae4171856a75" target="_blank" class="project-link">https://mall.iuufu.com/?v=ae4171856a75</a> - 参与开发和设计</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="experience-item compact-item">
@@ -522,7 +596,7 @@
                             <h3 class="company-name">大连融讯</h3>
                             <p class="position">前端开发工程师</p>
                         </div>
-                        <span class="duration">2023.3 - 2024.2</span>
+                        <span class="duration">2023.3 - 2023.12</span>
                     </div>
                     <p class="project-description">金融科技公司，专注于金融系统开发和数字化转型</p>
                     <div class="tech-stack">
@@ -621,54 +695,6 @@
             </section>
 
             <section class="section compact-section">
-                <h2 class="section-title">个人项目</h2>
-
-                <div class="project-item compact-item">
-                    <div class="project-header">
-                        <h3 class="project-name">衣设网</h3>
-                        <a href="https://github.com/chan-max/1s/tree/dev" class="project-link" target="_blank">查看代码</a>
-                    </div>
-                    <p class="project-description">这是一个正在开发中的开放式服装设计和交易平台</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Vue3</span>
-                        <span class="tech-tag">Three.js</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Koa</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Redis</span>
-                    </div>
-                    <ul class="work-content">
-                        <li>核心功能为基于Three.js和3D建模的服装模型组合</li>
-                        <li>PC端用来建模，移动端用来查看和交易</li>
-                        <li>基本的登录注册用户管理，类抖音的无线滑动、点赞、评论转发功能</li>
-                        <li>正在开发聊天发消息相关的功能</li>
-                        <li>预计会有积分系统、交易系统和一些复杂的交互功能</li>
-                    </ul>
-                </div>
-
-                <div class="project-item compact-item">
-                    <div class="project-header">
-                        <h3 class="project-name">Crush</h3>
-                        <a href="https://github.com/chan-max/Crush" class="project-link" target="_blank">查看代码</a>
-                    </div>
-                    <p class="project-description">前端视图框架</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">原生JavaScript</span>
-                        <span class="tech-tag">MVVM架构</span>
-                        <span class="tech-tag">虚拟DOM</span>
-                        <span class="tech-tag">响应式渲染</span>
-                    </div>
-                    <ul class="work-content">
-                        <li>实现MVVM架构模式</li>
-                        <li>模版编译、虚拟DOM、响应式渲染</li>
-                        <li>生命周期钩子、条件渲染、列表渲染</li>
-                        <li>基于CSS预处理语言模板的虚拟CSSOM，可以直接在CSS模板中使用JavaScript变量</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="section compact-section">
                 <h2 class="section-title">关于我</h2>
                 <div class="about-me">
                     <p>喜欢独立开发，善于独立思考，善于解决复杂问题，善于高效沟通</p>
@@ -682,6 +708,7 @@
 
         <footer class="footer">
             <p>感谢您的阅读，如有兴趣欢迎与我联系 😊</p>
+            <p>你可以在 49.232.186.238:1515 找到此页面</p>
         </footer>
     </div>
 </body>
