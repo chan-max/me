@@ -1,162 +1,114 @@
-<style>
-    .header{
-        display: flex;
-        flex-wrap: wrap;
-        row-gap:10px;
-    }
+# 陈政｜前端开发工程师
 
-    .item{
-        width:50%;
-        display: flex;
-    }
-
-    .label{
-        flex-shrink:0;
-        width:90px;
-        font-weight: bold;
-    }
-  
-    li{
-        padding:4px
-    }
-</style>
-
-<h1>基本信息</h1>
-
-<div class="header">
-    <div class="item">
-        <div class="label">基本信息：</div>
-        <div class="content">陈政  /  男  /  26</div>
-    </div>
-    <div class="item">
-        <div class="label">学历专业：</div>
-        <div class="content">大连交通大学本科 软件工程&信息系统</div>
-    </div>
-    <div class="item">
-        <div class="label">现 在 地：</div>
-        <div class="content">辽宁大连</div>
-    </div>
-    <div class="item">
-        <div class="label"> 求职方向:</div>
-        <div class="content"> 前端 </div>
-    </div>
-    <div class="item">
-        <div class="label">微    信：</div>
-        <div class="content">18742539196</div>
-    </div>
-    <div class="item">
-        <div class="label">手 机 号：</div>
-        <div class="content">187 4253 9196</div>
-    </div>
-    <div class="item">
-        <div class="label">Github   :</div>
-        <div class="content">https://github.com/chan-max</div>
-    </div>
-    <div class="item">
-        <div class="label">邮  箱:</div>
-        <div class="content">jackieontheway666@gmail.com</div>
-    </div>
-</div>
-
-<br>
-
-<h1>技术栈</h1>
-
-- 核心技术： js , nodejs , vue，python ，rpa工具
-- 了解开源生态 github ， dockerhub ，擅长使用开源社区，解决实际问题
-- 根据使用场景 ，实现chrome 插件，electron客户端 ，uniapp 小程序
-- js爬虫 ，rpa 工具，Pinterest，sora，表情包网，google culture and art 等，多为图片网站
-- rap 工具 ，影刀 ，八爪鱼，完成自动化操作，比如 社交媒体运行，数据爬取整合等
-- 基于 nuxt 的 seo 优化，有过相关开发
-- 熟练 cursor ，trae，gemini 等 ai 工具，关注 ai 新技术
-- 对二维平面设计，图片，字体，pod 设计有兴趣
-
-<br>
-<h1>工作及项目经历</h1>
-
-**公司:** 大连恩鸣跨境电子商务 &emsp;&emsp; **职位:** 前端 &emsp;&emsp; **时间:** 2025.2 - 目前
-
-**项目简介：** 内部电商ERP系统及跨境电商自动化工具平台
-
-**技术栈：** vue3 ts全家桶 , nodejs , python , RPA工具 , 数据爬虫 , 自动化脚本 , Photoshop自动化
-
-**工作概述：**
-
-- 从0到1搭建开发内部电商ERP系统，负责系统架构设计和技术选型
-- 开发数据爬虫系统，实现电商平台数据采集与分析
-- 开发RPA自动化工具，实现电商上品、自动发货、社交媒体发布等业务流程自动化
-- 实现基于素材库的PS套图自动制作系统，提升设计效率
-- 开发Temu、TikTok平台的全自动24小时上品系统
-- 开发各店铺销量统计分析系统，提供数据可视化报表
-- 优化自动化流程，提升业务处理效率和准确性
-  <br/>
+辽宁大连 ｜  187 4253 9196 / 微信同号 ｜  jackieontheway666@gmail.com ｜ Github：https://github.com/chan-max ｜ 求职方向：前端开发  ｜ 大连交通大学 · 本科 · 软件工程 & 信息系统
 
 ---
 
-<br>
+## 技术栈
 
-**公司:** 大连多麦德 &emsp;&emsp; **职位:** 前端 &emsp;&emsp; **时间:** 2024.2 - 2025.2
+### 核心能力
 
-**项目简介：** 报价ERP系统开发
+- JavaScript｜Node.js｜Vue｜Python｜RPA 工具
+- 熟悉 前端 + 自动化 + 数据采集 跨领域融合开发
+- 能独立完成 Chrome 插件 / Electron / UniApp 小程序 落地
 
-**技术栈：** vue3 ts全家桶 , nodejs , mysql , sequelize , redis
+### 自动化 & 爬虫
 
-**工作概述：**
+- JS 爬虫｜Pinterest / Sora / Google Arts 等图片站数据采集
+- 影刀、八爪鱼、RPA 工具，支持全流程自动化执行
+- 社交媒体自动化发布、数据整理整合、批量操作工具
 
-- 负责报价ERP系统的核心功能开发，包括报价管理、订单管理、库存管理等模块
-- 设计和实现复杂的报价计算逻辑，支持多维度价格策略和批量报价功能
-- 开发报价单生成、审核、审批流程，提升业务处理效率
-- 实现数据统计分析和报表功能，为业务决策提供数据支持
-- 优化系统性能，处理高并发场景下的数据查询和计算
-- 参与系统架构设计，确保系统的可扩展性和可维护性
-  <br/>
+### 工程 & AI 助力开发
 
----
-
-<br>
-
-**公司:** 大连快学教育软件开发公司 &emsp;&emsp; **职位:** 前端研发 &emsp;&emsp; **时间:** 2023.3 -2024.2 &emsp;&emsp;
-
-**项目简介：** 在线教育培训及考试平台, 主要服务人群学校及企业
-
-**技术栈：**  vue2 ts全家桶 , ant-design , jquery ，echartsjs  ，qrcdoejs ，tracking.js ,acejs ,nicedit.js hls.js ,animate.css 等
-
-**工作概述：**
-
-- 主导从0到1的前端技术框架搭建，参与技术选型
-- 使用vue2的技术架构重构原部分php项目代码，通过预加载和编译的方式解决起引来的高并发问题
-- 完成登录验证码，人脸识别，大量相关页面优化和列表部分的展示与处理
-- 部分重构原项目旧富文本编辑器，拓展原功能，增加代码块的插入 ，代码高亮， 在试卷中实现0依赖简易富文本，增加简答题的用户体验
-- 配合客户端外包人员，将原 web 项目集成客户端
-- 参与开发基于acejs和 websocket 的在线编程题
-- 参与系统的交互及功能设计，技术选型，框架设计，并且修复其系统原有的诸多bug
-- 参与探索 ai 命题的方式
-  <br/>
+- Nuxt SEO 优化经验
+- 熟练使用 Cursor、Trae、Gemini 等 AI 辅助开发
+- 对 平面设计、字体、POD 模板视觉设计 有兴趣
 
 ---
 
-<br>
+## 工作与项目经历
 
-**公司**： 大连倚天软件开发公司 &emsp;&emsp;**职位：** 前端 &emsp;&emsp;**时间：** 2021.6-2022.12 &emsp;&emsp;
+### 大连恩鸣跨境电子商务  — 前端开发
 
-**项目简介：** 多数为政府项目，有自研的后台管理系统，低代码平台
+**2025.02 - 至今**
+内部电商 ERP & 跨境电商自动化工具平台
+技术栈：Vue3 · TS · Node.js · Python · RPA · Photoshop 自动化 · 爬虫
 
-**技术栈：** vue2 ts全家桶 , element , jquery ，echartsjs ，threejs ,animate.css
+主要成果
 
-**工作内容：**
+- 0→1 搭建内部 ERP 系统，负责架构与技术选型
+- 开发数据爬虫系统，实现跨电商平台采集 & 汇总分析
+- 设计 RPA 自动化流程：上品、发货、社媒发布 全流程机器人执行
+- 实现 Photoshop 素材库套图自动化，大幅提升设计效率
+- Temu、TikTok 24 小时无人值守上品系统
+- 营销与运营数据可视化（销量、渠道、SKU 维度分析）
+- 自动化流程优化，提高准确率与执行效率
 
-- 配合开发组长开发公司政务办公系统，开发公司自用低代码平台, 负责诸多基础组件的封装
-- 参与开发诸多政府官网，多数为偏ui方面
-- 开发大屏数据可视化组件库 , 基于 echart , threejs 封装多种炫酷表格及地图组件
-- 维护旧项目
+---
 
-**公司:** 大连智明软件开发公司 （实习） &emsp;&emsp;**职位：** 实习软件研发 &emsp;&emsp;**时间：** 2020.12-2021.06
+### 大连多麦德 — 前端开发
 
-**技术栈**：angular + python + uipath + vbscript
+**2024.02 - 2025.02**
+报价 ERP 系统
+技术栈：Vue3 · TS · Node.js · MySQL · Sequelize · Redis
 
-**工作内容：**
+工作内容
 
-- 参与维护其原angular前端项目，使用 python 处理excel文件数据，使用uipath进行网络爬虫爬取网站数据
-  <br/>
+- 报价、订单、库存模块核心逻辑开发
+- 多维价格策略 & 批量报价能力
+- 设计报价单生成、审核、审批流程体系
+- 数据报表用于业务决策支持
+- 高并发数据查询与计算优化
+- 参与架构设计，提升扩展性与可维护性
 
-<p style="background:#222;text-align:center;color:#fff;"> 感谢您的阅读，如有兴趣欢迎与我联系 ：） </p>
+---
+
+### 大连快学教育软件开发公司 — 前端研发
+
+**2023.03 - 2024.02**
+在线教育培训与考试平台
+技术栈：Vue2 · TS · AntD · Echarts · WebSocket · AceJS · HLS
+
+项目成果
+
+- 主导前端技术框架搭建与选型
+- 重构旧 PHP 前端，解决高并发页面问题
+- 登录验证码、人脸识别、页面性能优化
+- 重构富文本编辑器：新增代码块、代码高亮
+- Web 项目客户端集成
+- 基于 AceJS + WebSocket 的在线编程题系统
+- 探索 AI 辅助命题逻辑
+
+---
+
+### 大连倚天软件 — 前端开发
+
+**2021.06 - 2022.12**
+政务办公系统 / 后台 / 低代码平台
+技术栈：Vue2 · Element · jQuery · ThreeJS · Echarts
+
+工作内容
+
+- 政务办公系统模块开发
+- 自研低代码平台基础组件封装
+- 多个政府官网（偏 UI ）
+- ThreeJS + Echarts 数据可视化大屏组件库
+
+---
+
+### 大连智明软件 — 实习软件研发
+
+**2020.12 - 2021.06**
+技术栈：Angular + Python + UiPath + VBScript
+
+- 维护 Angular 前端项目
+- Python 处理 Excel 文件
+- UiPath 网络爬虫
+
+---
+
+<p align="center" style="padding:10px 0;font-weight:bold;">
+感谢您的阅读，欢迎联系，一起聊聊技术、AI 与自动化 :)
+</p>
+
+
