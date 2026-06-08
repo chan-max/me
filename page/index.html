@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陈政 - 个人简历</title>
+    <title>陈政 - 前端开发工程师简历</title>
+    <meta name="description" content="陈政的个人简历 - 前端开发工程师，专注于 Vue.js、自动化脚本、电商 ERP 系统开发">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #dbeafe;
+            --accent: #7c3aed;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-soft: #f9fafb;
+            --border: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+            --radius: 12px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,1132 +31,628 @@
         }
 
         body {
-            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.45;
-            color: #333;
-            background: #f8f9fa;
-            font-size: 14px;
+            font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
         }
 
-        .container {
-            max-width: 210mm;
+        .resume {
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            min-height: 297mm;
+            background: var(--bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
         }
 
+        /* Header */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             color: white;
-            padding: 20px 25px;
-            text-align: center;
+            padding: 3rem 2.5rem;
             position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
 
         .avatar {
-            width: 70px;
-            height: 70px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            margin: 0 auto 12px;
-            display: block;
+            border: 4px solid rgba(255,255,255,0.3);
             object-fit: cover;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
         }
 
-        .name {
-            font-size: 1.8em;
+        .header-info h1 {
+            font-size: 2.25rem;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
         }
 
-        .title {
-            font-size: 0.95em;
+        .header-info .title {
+            font-size: 1.125rem;
             opacity: 0.9;
-            margin-bottom: 12px;
+            margin-bottom: 1.5rem;
         }
 
-        .contact-info {
+        .contact-grid {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 12px;
+            gap: 1rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 6px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 0.9em;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
         }
 
-        .main-content {
-            padding: 20px 25px;
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main {
+            padding: 2.5rem;
         }
 
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 2.5rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
         }
 
         .section-title {
-            font-size: 1.5em;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 18px;
-            padding-bottom: 9px;
-            border-bottom: 2px solid #667eea;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .info-item {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary);
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .info-label {
-            font-weight: 600;
-            color: #667eea;
-            min-width: 70px;
-            flex-shrink: 0;
+        .section-title svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
         }
 
-        .info-content {
-            color: #555;
-            font-size: 1.05em;
-        }
-
+        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
         }
 
-        .skill-category {
-            background: #f8f9fa;
-            padding: 12px;
-            border-radius: 8px;
-            border-left: 3px solid #667eea;
+        .skill-card {
+            background: var(--bg-soft);
+            padding: 1.25rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
         }
 
-        .skill-category h4 {
-            color: #2c3e50;
-            margin-bottom: 8px;
-            font-size: 1em;
+        .skill-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.75rem;
         }
 
         .skill-list {
             list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
-        .skill-list li {
-            padding: 4px 0;
-            color: #666;
+        .skill-tag {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Experience */
+        .timeline {
             position: relative;
-            padding-left: 15px;
-            font-size: 1.05em;
+            padding-left: 2rem;
         }
 
-        .skill-list li::before {
-            content: '▸';
-            color: #667eea;
+        .timeline::before {
+            content: '';
             position: absolute;
             left: 0;
-            font-weight: bold;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
         }
 
-        .experience-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            border-left: 3px solid #667eea;
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            background: var(--bg-soft);
+            padding: 1.5rem;
+            border-radius: var(--radius);
         }
 
-        .experience-header {
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 1.75rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: var(--shadow);
+            transform: translateX(-5px);
+        }
+
+        .timeline-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 0.5rem;
         }
 
-        .company-name {
-            font-size: 1.1em;
+        .company {
+            font-size: 1.125rem;
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--text);
         }
 
-        .position {
-            color: #667eea;
+        .role {
+            color: var(--primary);
+            font-size: 0.875rem;
             font-weight: 500;
-            font-size: 0.9em;
         }
 
         .duration {
-            color: #666;
-            font-size: 0.8em;
-            background: #e9ecef;
-            padding: 3px 10px;
-            border-radius: 12px;
-        }
-
-        .project-description {
-            color: #555;
-            margin-bottom: 10px;
-            line-height: 1.4;
-            font-size: 1.05em;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 10px;
-        }
-
-        .tech-tag {
-            background: #667eea;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 10px;
-            font-size: 0.75em;
+            background: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            color: var(--text-light);
             font-weight: 500;
+            box-shadow: var(--shadow);
         }
 
-        .work-content {
+        .description {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievements {
             list-style: none;
         }
 
-        .work-content li {
-            padding: 5px 0;
-            color: #555;
+        .achievements li {
             position: relative;
-            padding-left: 16px;
-            line-height: 1.4;
-            font-size: 0.95em;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text);
         }
 
-        .work-content li::before {
-            content: '•';
-            color: #667eea;
+        .achievements li::before {
+            content: '✓';
             position: absolute;
             left: 0;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        .project-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            border-left: 3px solid #764ba2;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .project-name {
-            font-size: 1.1em;
+            color: var(--primary);
             font-weight: 600;
-            color: #2c3e50;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .project-card {
+            background: var(--bg-soft);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .project-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .project-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .project-card p {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
         }
 
         .project-link {
-            color: #667eea;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
             text-decoration: none;
-            font-size: 0.8em;
-            background: #e9ecef;
-            padding: 3px 10px;
-            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 500;
         }
 
-        .project-links {
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid #e9ecef;
+        .project-link:hover {
+            text-decoration: underline;
         }
 
-        .project-links h4 {
-            color: #2c3e50;
-            font-size: 0.95em;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .project-link-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .project-link-list li {
-            margin-bottom: 7px;
-            font-size: 0.95em;
-            line-height: 1.45;
-        }
-
-        .project-link-list strong {
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        .project-link-list .project-link {
-            display: inline-block;
-            margin-left: 5px;
-            background: #667eea;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 8px;
-            font-size: 0.75em;
-            transition: background-color 0.2s;
-        }
-
-        .project-link-list .project-link:hover {
-            background: #5a6fd8;
-            text-decoration: none;
-        }
-
-        .about-me {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 18px;
-            border-radius: 8px;
-            border-left: 3px solid #764ba2;
-        }
-
-        .about-me p {
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 10px;
-            font-size: 0.9em;
-        }
-
+        /* Footer */
         .footer {
-            background: #2c3e50;
-            color: white;
+            background: var(--bg-soft);
+            padding: 1.5rem 2.5rem;
             text-align: center;
-            padding: 16px;
-            margin-top: 20px;
+            color: var(--text-light);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
         }
 
-        .footer p {
-            opacity: 0.8;
-            font-size: 1em;
-        }
-
-        /* 紧凑布局优化 */
-        .compact-section {
-            margin-bottom: 20px;
-        }
-
-        .compact-item {
-            margin-bottom: 12px;
-        }
-
-        /* 打印优化 */
-        @media print {
+        /* Responsive */
+        @media (max-width: 768px) {
             body {
-                background: white;
-                font-size: 12px;
-            }
-
-            .container {
-                box-shadow: none;
-                max-width: none;
-                margin: 0;
-                min-height: auto;
-            }
-
-            .section-title {
-                page-break-after: avoid;
-                font-size: 1.4em;
-                margin-bottom: 16px;
-            }
-
-            .experience-item,
-            .project-item {
-                page-break-inside: avoid;
-                margin-bottom: 12px;
-                padding: 14px;
+                padding: 1rem 0.5rem;
             }
 
             .header {
-                padding: 20px 25px;
+                padding: 2rem 1.5rem;
             }
 
-            .main-content {
-                padding: 20px 25px;
+            .header-content {
+                flex-direction: column;
+                text-align: center;
             }
 
-            .avatar {
-                width: 70px;
-                height: 70px;
+            .header-info h1 {
+                font-size: 1.75rem;
             }
 
-            .name {
-                font-size: 1.8em;
+            .contact-grid {
+                justify-content: center;
             }
 
-            .title {
-                font-size: 0.9em;
-            }
-
-            .contact-info {
-                gap: 10px;
-            }
-
-            .contact-item {
-                padding: 4px 8px;
-                font-size: 0.8em;
+            .main {
+                padding: 1.5rem;
             }
 
             .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-                gap: 8px;
+                grid-template-columns: 1fr;
             }
 
-            .skill-category {
-                padding: 12px;
+            .timeline {
+                padding-left: 1.5rem;
             }
 
-            .info-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 8px;
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .project-card:hover {
+                transform: none;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
+    <div class="resume">
         <header class="header">
-            <div class="profile-info">
+            <div class="header-content">
                 <img src="avatar.png" alt="陈政头像" class="avatar">
-                <h1 class="name">陈政</h1>
-                <p class="title">前端开发 / 全栈开发 / 脚本开发</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📧 jackieontheway666@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>📱 187 4253 9196</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>📱 132 2422 9196</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>💬 18742539196</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>🔗 <a href="http://github.com/chan-max" target="_blank" style="color: white; text-decoration: none;">github.com/chan-max</a></span>
+                <div class="header-info">
+                    <h1>陈政</h1>
+                    <p class="title">前端开发工程师 · 自动化工具开发 · 电商系统</p>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/></svg>
+                            <a href="mailto:jackieontheway666@gmail.com">jackieontheway666@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.814 1.114a1.382 1.382 0 0 1 1.964 0l1.372 1.372a1.382 1.382 0 0 1 .276.462l-.548 2.19a1.065 1.065 0 0 0 .276 1.014l2.713 2.713a1.065 1.065 0 0 0 1.014.276l2.19-.548a1.382 1.382 0 0 1 .462.276l1.372 1.372a1.382 1.382 0 0 1 0 1.964l-1.034 1.034c-.732.732-1.844.843-2.693.548a19.327 19.327 0 0 1-7.272-4.455 19.327 19.327 0 0 1-4.455-7.272c-.295-.849-.184-1.96.548-2.693l1.034-1.034z"/></svg>
+                            <span>187 4253 9196</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.374a.883.883 0 0 0-.882-.882H4.86a.882.882 0 1 0 0 1.764h6.404a.882.882 0 0 0 .882-.882zM8 4.697a3.303 3.303 0 1 0 0 6.606 3.303 3.303 0 0 0 0-6.606zm0 1.172a2.13 2.13 0 1 1 0 4.26 2.13 2.13 0 0 1 0-4.26z"/></svg>
+                            <span>微信: 18742539196</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 1.2.03.35-.1.72-.15 1.1-.15.38 0 .75.05 1.1.15.53-.24 1.2-.03 1.2-.03.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                            <a href="https://github.com/chan-max" target="_blank">github.com/chan-max</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                            <span>辽宁大连</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <main class="main-content">
-            <section class="section compact-section">
-                <h2 class="section-title">基本信息</h2>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">姓名：</span>
-                        <span class="info-content">陈政</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">性别：</span>
-                        <span class="info-content">男</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">生日：</span>
-                        <span class="info-content">1999.01.12</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">学历：</span>
-                        <span class="info-content">大连交通大学本科</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">专业：</span>
-                        <span class="info-content">软件工程 & 信息系统</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">所在地：</span>
-                        <span class="info-content">辽宁大连</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section compact-section">
-                <h2 class="section-title">技术栈</h2>
+        <main class="main">
+            <!-- Skills Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    技术栈
+                </h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>前端技术</h4>
-                        <ul class="skill-list">
-                            <li>Vue2 / Vue3 全家桶</li>
-                            <li>Nuxt.js 全栈框架</li>
-                            <li>TypeScript</li>
-                            <li>SCSS / CSS预处理器</li>
+                    <div class="skill-card">
+                        <h3>前端开发</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Vue 2/3</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Nuxt.js</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vite</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>后端开发</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express/Koa</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">Sequelize</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>客户端开发</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Electron</span>
+                            <span class="skill-tag">Chrome 插件</span>
+                            <span class="skill-tag">UniApp</span>
+                            <span class="skill-tag">Capacitor</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>自动化 & 爬虫</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">RPA</span>
+                            <span class="skill-tag">影刀</span>
+                            <span class="skill-tag">数据采集</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>AI 工具</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Cursor</span>
+                            <span class="skill-tag">Gemini</span>
+                            <span class="skill-tag">Trae</span>
+                            <span class="skill-tag">AI 辅助开发</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>其他技能</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Three.js</span>
+                            <span class="skill-tag">ECharts</span>
+                            <span class="skill-tag">POD 设计</span>
+                            <span class="skill-tag">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    工作经历
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company">大连恩鸣跨境电子商务</h3>
+                                <p class="role">前端开发工程师</p>
+                            </div>
+                            <span class="duration">2025.02 - 至今</span>
+                        </div>
+                        <p class="description">内部电商 ERP & 跨境电商自动化工具平台</p>
+                        <ul class="achievements">
+                            <li>从 0 到 1 搭建内部 ERP 系统，负责架构与技术选型</li>
+                            <li>开发数据爬虫系统，实现跨电商平台采集与汇总分析</li>
+                            <li>设计 RPA 自动化流程：上品、发货、社媒发布全流程机器人执行</li>
+                            <li>实现 Photoshop 素材库套图自动化，大幅提升设计效率</li>
+                            <li>Temu、TikTok 24 小时无人值守上品系统</li>
+                            <li>营销与运营数据可视化（销量、渠道、SKU 维度分析）</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
-                        <h4>移动端开发</h4>
-                        <ul class="skill-list">
-                            <li>Capacitor 跨平台开发</li>
-                            <li>Ionic 框架</li>
-                            <li>UniApp 跨平台开发</li>
-                            <li>移动端UI组件库</li>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company">大连多麦德</h3>
+                                <p class="role">前端开发工程师</p>
+                            </div>
+                            <span class="duration">2024.02 - 2025.02</span>
+                        </div>
+                        <p class="description">报价 ERP 系统</p>
+                        <ul class="achievements">
+                            <li>报价、订单、库存模块核心逻辑开发</li>
+                            <li>多维价格策略与批量报价能力</li>
+                            <li>设计报价单生成、审核、审批流程体系</li>
+                            <li>数据报表用于业务决策支持</li>
+                            <li>高并发数据查询与计算优化</li>
+                            <li>参与架构设计，提升扩展性与可维护性</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
-                        <h4>桌面端开发</h4>
-                        <ul class="skill-list">
-                            <li>Electron 客户端开发</li>
-                            <li>跨平台桌面应用</li>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company">大连快学教育软件开发公司</h3>
+                                <p class="role">前端研发工程师</p>
+                            </div>
+                            <span class="duration">2023.03 - 2024.02</span>
+                        </div>
+                        <p class="description">在线教育培训与考试平台</p>
+                        <ul class="achievements">
+                            <li>主导前端技术框架搭建与选型</li>
+                            <li>重构旧 PHP 前端，解决高并发页面问题</li>
+                            <li>登录验证码、人脸识别、页面性能优化</li>
+                            <li>重构富文本编辑器：新增代码块、代码高亮</li>
+                            <li>基于 AceJS + WebSocket 的在线编程题系统</li>
+                            <li>探索 AI 辅助命题逻辑</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
-                        <h4>后端技术</h4>
-                        <ul class="skill-list">
-                            <li>Node.js / Express / Koa</li>
-                            <li>NestJS 企业级框架</li>
-                            <li>MySQL / Sequelize ORM</li>
-                            <li>Redis 缓存</li>
-                            <li>Linux 服务器管理</li>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company">大连倚天软件</h3>
+                                <p class="role">前端开发工程师</p>
+                            </div>
+                            <span class="duration">2021.06 - 2022.12</span>
+                        </div>
+                        <p class="description">政务办公系统 / 后台 / 低代码平台</p>
+                        <ul class="achievements">
+                            <li>政务办公系统模块开发</li>
+                            <li>自研低代码平台基础组件封装</li>
+                            <li>ThreeJS + Echarts 数据可视化大屏组件库</li>
+                            <li>多个政府官网 UI 开发</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
-                        <h4>自动化与脚本</h4>
-                        <ul class="skill-list">
-                            <li>Node.js 自动化脚本</li>
-                            <li>Shell 脚本开发</li>
-                            <li>Figma 设计工具</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>DevOps & 部署</h4>
-                        <ul class="skill-list">
-                            <li>CI/CD 流水线搭建</li>
-                            <li>GitHub Actions</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>AI 开发工具</h4>
-                        <ul class="skill-list">
-                            <li>Cursor AI 编程助手</li>
-                            <li>Gemini CLI 命令行工具</li>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company">大连智明软件（实习）</h3>
+                                <p class="role">实习软件研发</p>
+                            </div>
+                            <span class="duration">2020.12 - 2021.06</span>
+                        </div>
+                        <ul class="achievements">
+                            <li>维护 Angular 前端项目</li>
+                            <li>Python 处理 Excel 文件</li>
+                            <li>UiPath 网络爬虫</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <section class="section compact-section">
-                <h2 class="section-title">工作经历</h2>
-
-                <div class="experience-item compact-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="company-name">大连恒优新跨境电商</h3>
-                            <p class="position">前端开发工程师</p>
+            <!-- Projects Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    个人项目
+                </h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>衣设网</h3>
+                        <p>开放式服装设计和交易平台，基于 Three.js 的 3D 服装模型组合系统</p>
+                        <div class="skill-list" style="margin-bottom: 1rem;">
+                            <span class="skill-tag">Vue3</span>
+                            <span class="skill-tag">Three.js</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">MySQL</span>
                         </div>
-                        <span class="duration">2025.2 - 至今</span>
+                        <a href="https://github.com/chan-max/1s/tree/dev" target="_blank" class="project-link">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 1.2.03.35-.1.72-.15 1.1-.15.38 0 .75.05 1.1.15.53-.24 1.2-.03 1.2-.03.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                            查看源码
+                        </a>
                     </div>
-                    <p class="project-description">跨境电商平台，专注于海外市场拓展和商品销售</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Vue2</span>
-                        <span class="tech-tag">Vue3</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Vant</span>
-                        <span class="tech-tag">Vite</span>
-                    </div>
-                    <ul class="work-content">
-                        <li>负责跨境电商平台的前端开发和维护</li>
-                        <li>负责独立站的设计和用户交互功能</li>
-                        <li>参与多语言国际化功能的开发</li>
-                        <li>开发素材，发布商品，发货等功能模块</li>
-                        <li>开发日常自动化脚本和素材爬虫工具</li>
-                    </ul>
-                    <div class="project-links">
-                        <h4>项目地址：</h4>
-                        <ul class="project-link-list">
-                            <li><strong>ERP系统：</strong><a href="https://www.erp.iuufu.com" target="_blank" class="project-link">https://www.erp.iuufu.com</a> - 完全开发</li>
-                            <li><strong>门户网站：</strong><a href="https://iuufu.com/" target="_blank" class="project-link">https://iuufu.com/</a> - 参与开发和设计</li>
-                            <li><strong>线上商城：</strong><a href="https://mall.iuufu.com/?v=ae4171856a75" target="_blank" class="project-link">https://mall.iuufu.com/?v=ae4171856a75</a> - 参与开发和设计</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item compact-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="company-name">大连融讯</h3>
-                            <p class="position">前端开发工程师</p>
+                    <div class="project-card">
+                        <h3>Crush 视图框架</h3>
+                        <p>类似 Vue 的响应式视图框架，实现虚拟 DOM、模板编译、生命周期等核心功能</p>
+                        <div class="skill-list" style="margin-bottom: 1rem;">
+                            <span class="skill-tag">原生 JS</span>
+                            <span class="skill-tag">虚拟 DOM</span>
+                            <span class="skill-tag">响应式</span>
                         </div>
-                        <span class="duration">2024.3 - 2024.12</span>
+                        <a href="https://github.com/chan-max/Crush" target="_blank" class="project-link">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 1.2.03.35-.1.72-.15 1.1-.15.38 0 .75.05 1.1.15.53-.24 1.2-.03 1.2-.03.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                            查看源码
+                        </a>
                     </div>
-                    <p class="project-description">船舶运输公司，专注于船舶报价ERP系统的开发和维护</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Vue3</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Element Plus</span>
-                        <span class="tech-tag">Vite</span>
-                        <span class="tech-tag">Pinia</span>
-                        <span class="tech-tag">ECharts</span>
-                    </div>
-                    <ul class="work-content">
-                        <li>负责船舶报价ERP系统的前端开发工作</li>
-                        <li>使用Vue3 + TypeScript技术栈开发船舶运输管理系统</li>
-                        <li>开发船舶报价计算、航线规划、成本分析等功能模块</li>
-                        <li>设计并实现数据可视化大屏，展示船舶运营数据</li>
-                        <li>参与船舶业务模块的需求分析和系统设计</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item compact-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="company-name">大连快学教育软件开发公司</h3>
-                            <p class="position">前端研发工程师</p>
-                        </div>
-                        <span class="duration">2023.6 - 2024.2</span>
-                    </div>
-                    <p class="project-description">在线教育培训及考试平台，主要服务人群学校及企业</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Vue2</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Ant Design</span>
-                        <span class="tech-tag">ECharts</span>
-                        <span class="tech-tag">WebSocket</span>
-                        <span class="tech-tag">Ace.js</span>
-                    </div>
-                    <ul class="work-content">
-                        <li>主导从0到1的前端技术框架搭建，参与技术选型</li>
-                        <li>使用Vue2技术架构重构原部分PHP项目代码，通过预加载和编译的方式解决高并发问题</li>
-                        <li>完成登录验证码、人脸识别、大量相关页面优化和列表部分的展示与处理</li>
-                        <li>部分重构原项目旧富文本编辑器，拓展原功能，增加代码块的插入、代码高亮</li>
-                        <li>配合客户端外包人员，将原Web项目集成客户端</li>
-                        <li>参与开发基于Ace.js和WebSocket的在线编程题</li>
-                        <li>参与系统的交互及功能设计、技术选型、框架设计，修复系统原有的诸多Bug</li>
-                        <li>参与探索AI命题的方式</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item compact-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="company-name">大连倚天软件开发公司</h3>
-                            <p class="position">前端研发工程师</p>
-                        </div>
-                        <span class="duration">2021.7 - 2023.2</span>
-                    </div>
-                    <p class="project-description">多数为政府项目，有自研的后台管理系统、低代码平台</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Vue2</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Element UI</span>
-                        <span class="tech-tag">ECharts</span>
-                        <span class="tech-tag">Three.js</span>
-                        <span class="tech-tag">Animate.css</span>
-                    </div>
-                    <ul class="work-content">
-                        <li>配合开发组长开发公司政务办公系统，开发公司自用低代码平台</li>
-                        <li>负责诸多基础组件的封装</li>
-                        <li>参与开发诸多政府官网，多数为偏UI方面</li>
-                        <li>开发大屏数据可视化组件库，基于ECharts、Three.js封装多种炫酷表格及地图组件</li>
-                        <li>维护旧项目</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item compact-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="company-name">大连智明软件开发公司</h3>
-                            <p class="position">实习软件研发</p>
-                        </div>
-                        <span class="duration">2020.12 - 2021.06</span>
-                    </div>
-                    <p class="project-description">参与维护原Angular前端项目，使用Python处理Excel文件数据</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Angular</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">UiPath</span>
-                        <span class="tech-tag">VBScript</span>
-                    </div>
-                    <ul class="work-content">
-                        <li>参与维护其原Angular前端项目</li>
-                        <li>使用Python处理Excel文件数据</li>
-                        <li>使用UiPath进行网络爬虫爬取网站数据</li>
-                    </ul>
                 </div>
             </section>
 
-            <section class="section compact-section">
-                <h2 class="section-title">我做过的项目</h2>
-                <div class="about-me">
-                    <h4 style="color: #2c3e50; margin-bottom: 12px; font-weight: 600;">我设计并开发小游戏的网站：</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin-bottom: 12px;">
-                        <div style="background: #f8f9fa; padding: 6px 10px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>ShadowForge</strong><br>
-                            <small style="color: #666;">shadowforgeplay.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>TitanRift</strong><br>
-                            <small style="color: #666;">titanriftbattle.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>NovaRaid</strong><br>
-                            <small style="color: #666;">titanriftbattle.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>HexBlaze</strong><br>
-                            <small style="color: #666;">hexblazearena.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>InfernoQuest</strong><br>
-                            <small style="color: #666;">infernoquestgame.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Orantris</strong><br>
-                            <small style="color: #666;">orantrispath.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Syrixal</strong><br>
-                            <small style="color: #666;">syrixalzone.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Plavonar</strong><br>
-                            <small style="color: #666;">plavonargame.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Craythar</strong><br>
-                            <small style="color: #666;">craytharedge.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Wynorix</strong><br>
-                            <small style="color: #666;">wynorixrealm.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Phynorad</strong><br>
-                            <small style="color: #666;">phynoradplay.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Zorvalin</strong><br>
-                            <small style="color: #666;">zorvalinforge.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Drelvox</strong><br>
-                            <small style="color: #666;">drelvoxquest.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Klythari</strong><br>
-                            <small style="color: #666;">klytharigame.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Thraxion</strong><br>
-                            <small style="color: #666;">thraxionland.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>OrbRaid</strong><br>
-                            <small style="color: #666;">orbraidgame.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Cryonix</strong><br>
-                            <small style="color: #666;">cryonixpath.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>InferGrid</strong><br>
-                            <small style="color: #666;">infergridplay.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>CelForge</strong><br>
-                            <small style="color: #666;">celforgezone.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Spectrix</strong><br>
-                            <small style="color: #666;">spectrixquest.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>TitanRun</strong><br>
-                            <small style="color: #666;">titanrungame.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>NovaClash</strong><br>
-                            <small style="color: #666;">novaclashplay.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Thundrix</strong><br>
-                            <small style="color: #666;">thundrixpath.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>EchoCry</strong><br>
-                            <small style="color: #666;">echocrygame.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>WarpNix</strong><br>
-                            <small style="color: #666;">warpnixarena.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>RiftForge</strong><br>
-                            <small style="color: #666;">riftforgegame.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>NovaHaven</strong><br>
-                            <small style="color: #666;">novahavenplay.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>EmberRun</strong><br>
-                            <small style="color: #666;">emberrunquest.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>StarBreach</strong><br>
-                            <small style="color: #666;">starbreachzone.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>FrostCrest</strong><br>
-                            <small style="color: #666;">frostcrestpath.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Blaxitor</strong><br>
-                            <small style="color: #666;">blaxitor.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Cevrunis</strong><br>
-                            <small style="color: #666;">cevrunis.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Galthyren</strong><br>
-                            <small style="color: #666;">galthyren.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Huxalith</strong><br>
-                            <small style="color: #666;">huxalith.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Myrvoxen</strong><br>
-                            <small style="color: #666;">myrvoxen.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Nexthylim</strong><br>
-                            <small style="color: #666;">nexthylim.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Orivalth</strong><br>
-                            <small style="color: #666;">orivalth.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Rynkazor</strong><br>
-                            <small style="color: #666;">rynkazor.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Tavyquex</strong><br>
-                            <small style="color: #666;">tavyquex.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Zelphiron</strong><br>
-                            <small style="color: #666;">zelphiron.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Zogwumpus</strong><br>
-                            <small style="color: #666;">zogwumpus.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Plixiboo</strong><br>
-                            <small style="color: #666;">plixiboo.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Twizkoran</strong><br>
-                            <small style="color: #666;">twizkoran.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Bumblethax</strong><br>
-                            <small style="color: #666;">bumblethax.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Whirlygox</strong><br>
-                            <small style="color: #666;">whirlygox.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Snorkavip</strong><br>
-                            <small style="color: #666;">snorkavip.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Fluffexor</strong><br>
-                            <small style="color: #666;">fluffexor.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Gloopynix</strong><br>
-                            <small style="color: #666;">gloopynix.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Jinxavolt</strong><br>
-                            <small style="color: #666;">jinxavolt.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Quirzobat</strong><br>
-                            <small style="color: #666;">quirzobat.us</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Glintrove</strong><br>
-                            <small style="color: #666;">glintrove.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Voonspire</strong><br>
-                            <small style="color: #666;">voonspire.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Whisporch</strong><br>
-                            <small style="color: #666;">whisporch.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Bravellum</strong><br>
-                            <small style="color: #666;">bravellum.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Joltaryn</strong><br>
-                            <small style="color: #666;">joltaryn.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Starwhim</strong><br>
-                            <small style="color: #666;">starwhim.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Zestoria</strong><br>
-                            <small style="color: #666;">zestoria.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Blitzora</strong><br>
-                            <small style="color: #666;">blitzora.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Flickory</strong><br>
-                            <small style="color: #666;">flickory.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Sparkivale</strong><br>
-                            <small style="color: #666;">sparkivale.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Puddlywink</strong><br>
-                            <small style="color: #666;">puddlywink.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Bopplewhiz</strong><br>
-                            <small style="color: #666;">bopplewhiz.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Spryzip</strong><br>
-                            <small style="color: #666;">spryzip.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Fizzlybud</strong><br>
-                            <small style="color: #666;">fizzlybud.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Niftybloom</strong><br>
-                            <small style="color: #666;">niftybloom.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Glimmerpip</strong><br>
-                            <small style="color: #666;">glimmerpip.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Snicklefog</strong><br>
-                            <small style="color: #666;">snicklefog.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Zappyglee</strong><br>
-                            <small style="color: #666;">zappyglee.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Tumblequip</strong><br>
-                            <small style="color: #666;">tumblequip.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Jinglehop</strong><br>
-                            <small style="color: #666;">jinglehop.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Zestysnap</strong><br>
-                            <small style="color: #666;">zestysnap.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Puffyglee</strong><br>
-                            <small style="color: #666;">puffyglee.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Whizzlebud</strong><br>
-                            <small style="color: #666;">whizzlebud.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Chipperbop</strong><br>
-                            <small style="color: #666;">chipperbop.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Snicklepip</strong><br>
-                            <small style="color: #666;">snicklepip.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Bopplywhir</strong><br>
-                            <small style="color: #666;">bopplywhir.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Tickleflit</strong><br>
-                            <small style="color: #666;">tickleflit.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Glimmertot</strong><br>
-                            <small style="color: #666;">glimmertot.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Jigglefizz</strong><br>
-                            <small style="color: #666;">jigglefizz.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Sproutyquip</strong><br>
-                            <small style="color: #666;">sproutyquip.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Tlyrbek</strong><br>
-                            <small style="color: #666;">tlyrbek.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Vhonjir</strong><br>
-                            <small style="color: #666;">vhonjir.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Rwevkol</strong><br>
-                            <small style="color: #666;">rwevkol.com</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Nylthar</strong><br>
-                            <small style="color: #666;">nylthar.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Cwompis</strong><br>
-                            <small style="color: #666;">cwompis.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Shyndrel</strong><br>
-                            <small style="color: #666;">shyndrel.xyz</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Plevkur</strong><br>
-                            <small style="color: #666;">plevkur.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Kwythar</strong><br>
-                            <small style="color: #666;">kwythar.online</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Tzorwyn</strong><br>
-                            <small style="color: #666;">tzorwyn.site</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #667eea;">
-                            <strong>Frynjel</strong><br>
-                            <small style="color: #666;">frynjel.site</small>
-                        </div>
-                    </div>
-                    <p style="color: #666; font-size: 1.05em; margin-top: 15px;">以上是我设计并开发的游戏网站项目，涵盖了多个游戏品牌和域名。每个项目都经过精心设计和开发，展现了我在网站开发方面的专业能力。</p>
-
-                    <h4 style="color: #2c3e50; margin-bottom: 12px; font-weight: 600; margin-top: 20px;">我开发的爬虫脚本：</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 12px;">
-                        <div style="background: #f8f9fa; padding: 10px 12px; border-radius: 8px; border-left: 3px solid #764ba2;">
-                            <strong style="color: #2c3e50;">Google Art 高清图爬取</strong><br>
-                            <small style="color: #666;">自动化爬取Google Art平台的高清艺术作品图片</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #764ba2;">
-                            <strong style="color: #2c3e50;">各大社交媒体热搜合集</strong><br>
-                            <small style="color: #666;">自动化采集微博、抖音、小红书等平台热搜数据</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #764ba2;">
-                            <strong style="color: #2c3e50;">NASA官网实拍图爬取</strong><br>
-                            <small style="color: #666;">自动化采集NASA官网的太空实拍图片和天文照片</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #764ba2;">
-                            <strong style="color: #2c3e50;">求表情网表情包图爬取</strong><br>
-                            <small style="color: #666;">批量下载求表情网平台的表情包和动图资源</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #764ba2;">
-                            <strong style="color: #2c3e50;">梵高博物馆名画图爬取</strong><br>
-                            <small style="color: #666;">自动化采集梵高博物馆的经典艺术作品高清图片</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #764ba2;">
-                            <strong style="color: #2c3e50;">WorldVectorLogo世界Logo收集</strong><br>
-                            <small style="color: #666;">批量下载世界各地的企业Logo和品牌标识矢量图</small>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #764ba2;">
-                            <strong style="color: #2c3e50;">更多爬虫项目...</strong><br>
-                            <small style="color: #666;">敬请期待，后续会补充更多爬虫脚本项目</small>
-                        </div>
-                    </div>
-                    <p style="color: #666; font-size: 1.05em; margin-top: 15px;">以上是我开发的自动化爬虫脚本项目，涵盖了图像爬取、数据采集等多个领域，展现了我在自动化脚本开发方面的技术能力。</p>
-
-                    <h4 style="color: #2c3e50; margin-bottom: 12px; font-weight: 600; margin-top: 20px;">我正在开发的项目：</h4>
-                    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 16px; border-radius: 12px; border-left: 4px solid #28a745; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 16px;">
-                        <h5 style="color: #2c3e50; font-size: 1.1em; margin-bottom: 12px; text-align: center;">🎯 AI驱动的智能电商生态系统</h5>
-                        <p style="color: #555; text-align: center; margin-bottom: 16px; font-size: 0.9em;">这是一个完整的AI驱动项目，各模块互相搭配使用，目的是创建一个自动热点获取并制作商品效果图，以及发布到多媒体的工具</p>
-
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 16px;">
-                            <div style="background: white; padding: 12px; border-radius: 8px; border: 1px solid #e9ecef;">
-                                <strong style="color: #2c3e50; font-size: 1.1em;">🏪 1s.design 线上服装商城</strong><br>
-                                <small style="color: #666; display: block; margin: 6px 0;">官网：<a href="https://1s.design" target="_blank" style="color: #28a745; text-decoration: none;">1s.design</a></small>
-                                <small style="color: #666; display: block; margin: 3px 0;">项目类型：全栈电商平台</small>
-                                <small style="color: #666; display: block; margin: 3px 0;">功能：商品展示、销售、用户管理</small>
-                            </div>
-
-                            <div style="background: white; padding: 12px; border-radius: 8px; border: 1px solid #e9ecef;">
-                                <strong style="color: #2c3e50; font-size: 1.1em;">🖼️ 素材管理系统</strong><br>
-                                <small style="color: #666; display: block; margin: 6px 0;">管理地址：<a href="http://49.232.186.238:1521" target="_blank" style="color: #28a745; text-decoration: none;">49.232.186.238:1521</a></small>
-                                <small style="color: #666; display: block; margin: 3px 0;">客户端地址：<a href="http://49.232.186.238:1525" target="_blank" style="color: #28a745; text-decoration: none;">49.232.186.238:1525</a></small>
-                                <small style="color: #666; display: block; margin: 3px 0;">项目特色：几十万集图片素材库 + 大量字体资源</small>
-                            </div>
-
-                            <div style="background: white; padding: 12px; border-radius: 8px; border: 1px solid #e9ecef;">
-                                <strong style="color: #2c3e50; font-size: 1.1em;">🎨 3D设计工具</strong><br>
-                                <small style="color: #666; display: block; margin: 6px 0;">设计工具：<a href="http://49.232.186.238:1522" target="_blank" style="color: #28a745; text-decoration: none;">49.232.186.238:1522</a></small>
-                                <small style="color: #666; display: block; margin: 3px 0;">技术：基于Three.js的3D商品效果图工具</small>
-                                <small style="color: #666; display: block; margin: 3px 0;">功能：支持素材和预定义模版的自动生成新商品</small>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 12px; border-radius: 8px; border: 1px solid #e9ecef; margin-bottom: 12px;">
-                            <strong style="color: #2c3e50; font-size: 1.1em;">🤖 AI智能功能</strong><br>
-                            <small style="color: #666; display: block; margin: 6px 0;">热点获取：AI自动分析市场热点和趋势</small>
-                            <small style="color: #666; display: block; margin: 3px 0;">内容生成：商品发布社交媒体时支持AI自动生成内容</small>
-                            <small style="color: #666; display: block; margin: 3px 0;">多平台发布：自动发布到抖音、小红书、微博、快手等平台</small>
-                        </div>
-
-                        <div style="text-align: center; color: #28a745; font-weight: 600; font-size: 0.9em;">
-                            🔄 各模块互相搭配使用，形成完整的AI驱动电商生态
-                        </div>
-                    </div>
-                    <p style="color: #666; font-size: 1.05em; margin-top: 15px;">以上是我正在积极开发中的项目，展现了我在全栈开发方面的持续学习和技术实践能力。</p>
+            <!-- Education Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+                    教育背景
+                </h2>
+                <div class="skill-card">
+                    <h3>大连交通大学 · 软件工程 & 信息系统</h3>
+                    <p style="color: var(--text-light); font-size: 0.875rem;">本科 · 2016 - 2021</p>
                 </div>
             </section>
         </main>
 
         <footer class="footer">
-            <p>感谢您的阅读，如有兴趣欢迎与我联系 😊</p>
-            <p>你可以在 49.232.186.238:1515 找到此页面</p>
+            <p>感谢您的阅读！欢迎联系，一起聊聊技术、AI 与自动化 🚀</p>
         </footer>
     </div>
 </body>
-
 </html>
