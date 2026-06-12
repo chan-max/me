@@ -36,7 +36,7 @@
 
         body {
             font-family: var(--font-sans);
-            line-height: 1.6;
+            line-height: 1.42;
             color: var(--gray-900);
             background: var(--gray-100);
             -webkit-font-smoothing: antialiased;
@@ -87,43 +87,44 @@
         /* Resume Container */
         .resume {
             max-width: 210mm;
-            margin: 2rem auto;
+            min-height: 297mm;
+            margin: 1rem auto;
             background: var(--white);
-            padding: 3rem;
+            padding: 2rem 2.15rem;
         }
 
         /* Header */
         .header {
-            padding-bottom: 2rem;
+            padding-bottom: 1rem;
             border-bottom: 1px solid var(--gray-200);
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .header-info h1 {
-            font-size: 2.25rem;
+            font-size: 1.9rem;
             font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.25rem;
+            letter-spacing: 0;
+            margin-bottom: 0.1rem;
         }
 
         .header-info .title {
-            font-size: 1.0625rem;
+            font-size: 0.95rem;
             color: var(--gray-500);
             font-weight: 400;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .contact-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem 1.25rem;
+            gap: 0.25rem 1rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.375rem;
-            font-size: 0.8125rem;
+            gap: 0.3rem;
+            font-size: 0.76rem;
             color: var(--gray-700);
         }
 
@@ -146,7 +147,7 @@
 
         /* Sections */
         .section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .section:last-child {
@@ -154,13 +155,13 @@
         }
 
         .section-title {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             color: var(--gray-400);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
+            margin-bottom: 0.7rem;
+            padding-bottom: 0.4rem;
             border-bottom: 1px solid var(--gray-200);
         }
 
@@ -168,34 +169,34 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 0.7rem 1rem;
         }
 
         .skill-item h3 {
-            font-size: 0.875rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
             color: var(--gray-900);
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.375rem;
+            gap: 0.25rem;
         }
 
         .skill-tag {
             background: var(--gray-100);
             color: var(--gray-700);
-            padding: 0.25rem 0.625rem;
+            padding: 0.16rem 0.45rem;
             border-radius: 4px;
-            font-size: 0.75rem;
+            font-size: 0.68rem;
             font-weight: 500;
         }
 
         /* Experience */
         .exp-item {
-            margin-bottom: 2rem;
+            margin-bottom: 0.9rem;
         }
 
         .exp-item:last-child {
@@ -206,32 +207,33 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.1rem;
+            gap: 1rem;
         }
 
         .exp-company {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--gray-900);
         }
 
         .exp-duration {
-            font-size: 0.8125rem;
+            font-size: 0.74rem;
             color: var(--gray-400);
             font-weight: 500;
             white-space: nowrap;
         }
 
         .exp-role {
-            font-size: 0.875rem;
+            font-size: 0.78rem;
             color: var(--gray-500);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.2rem;
         }
 
         .exp-desc {
-            font-size: 0.8125rem;
+            font-size: 0.74rem;
             color: var(--gray-500);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.35rem;
             font-style: italic;
         }
 
@@ -241,9 +243,9 @@
 
         .exp-list li {
             position: relative;
-            padding-left: 1rem;
-            margin-bottom: 0.375rem;
-            font-size: 0.875rem;
+            padding-left: 0.75rem;
+            margin-bottom: 0.16rem;
+            font-size: 0.78rem;
             color: var(--gray-700);
         }
 
@@ -252,8 +254,8 @@
             position: absolute;
             left: 0;
             top: 0.5em;
-            width: 4px;
-            height: 4px;
+            width: 3px;
+            height: 3px;
             background: var(--gray-400);
             border-radius: 50%;
         }
@@ -262,23 +264,23 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .project-item h3 {
-            font-size: 1rem;
+            font-size: 0.88rem;
             font-weight: 600;
-            margin-bottom: 0.375rem;
+            margin-bottom: 0.2rem;
         }
 
         .project-item p {
-            font-size: 0.8125rem;
+            font-size: 0.74rem;
             color: var(--gray-500);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.45rem;
         }
 
         .project-url {
-            font-size: 0.8125rem;
+            font-size: 0.7rem;
             color: var(--gray-500);
             font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
             word-break: break-all;
@@ -292,27 +294,27 @@
         }
 
         .edu-school {
-            font-size: 1rem;
+            font-size: 0.84rem;
             font-weight: 600;
         }
 
         .edu-detail {
-            font-size: 0.875rem;
+            font-size: 0.78rem;
             color: var(--gray-500);
         }
 
         .edu-year {
-            font-size: 0.8125rem;
+            font-size: 0.74rem;
             color: var(--gray-400);
         }
 
         .edu-inline {
-            margin-top: 1.25rem;
-            padding-top: 1.25rem;
+            margin-top: 0.65rem;
+            padding-top: 0.55rem;
             border-top: 1px solid var(--gray-200);
             display: flex;
             align-items: baseline;
-            font-size: 0.875rem;
+            font-size: 0.78rem;
         }
 
         .edu-inline .edu-year {
@@ -322,11 +324,11 @@
 
         /* Footer */
         .footer {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
+            margin-top: 1.2rem;
+            padding-top: 0.75rem;
             border-top: 1px solid var(--gray-200);
             text-align: center;
-            font-size: 0.8125rem;
+            font-size: 0.74rem;
             color: var(--gray-400);
         }
 
@@ -383,6 +385,7 @@
             .resume {
                 margin: 0;
                 box-shadow: none;
+                padding: 1.8rem 2rem;
             }
 
             .section {
@@ -597,7 +600,7 @@
                 <div class="project-item">
                     <h3>衣设网</h3>
                     <p>开放式服装设计和交易平台，基于 Three.js 的 3D 服装模型组合系统</p>
-                    <div class="skill-tags" style="margin-bottom: 0.75rem;">
+                    <div class="skill-tags" style="margin-bottom: 0.4rem;">
                         <span class="skill-tag">Vue3</span>
                         <span class="skill-tag">Three.js</span>
                         <span class="skill-tag">Node.js</span>
@@ -608,7 +611,7 @@
                 <div class="project-item">
                     <h3>Crush 视图框架</h3>
                     <p>类似 Vue 的响应式视图框架，实现虚拟 DOM、模板编译、生命周期等核心功能</p>
-                    <div class="skill-tags" style="margin-bottom: 0.75rem;">
+                    <div class="skill-tags" style="margin-bottom: 0.4rem;">
                         <span class="skill-tag">原生 JS</span>
                         <span class="skill-tag">虚拟 DOM</span>
                         <span class="skill-tag">响应式</span>
