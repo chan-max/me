@@ -1,122 +1,134 @@
-<h1>前端开发求职简历</h1>
+# 陈政｜前端开发工程师
 
-**基本信息：** 陈政  /  男  /  25
-
-**现&ensp;在&ensp;地：** 辽宁大连
-
-**手&ensp;机&ensp;号：** 18742539196
-
-**微&ensp;&ensp;&ensp;&ensp;信：** 18742539196
-
-**邮&emsp;&emsp;箱：** jackieontheway666@gmail.com
-
-**GitHub地址  ：** https://github.com/chan-max
-
-**专&ensp;&ensp;&ensp;&ensp;业：** &ensp;大连交通大学 软件工程 & 信息系统与信息管理 （2016 - 2021）
-
-**求职方向** : 前后端，移动端，产品端
-
-**在职状态** : 离职随时入职
-
-<br>
-
-<h1>技术栈</h1>
-
-- 熟悉 js , ts，nodejs , vue2 , vue3 框架及其全家桶
-- 熟悉常见组件库开源库，jquery，bootstrap，element, ant-design等
-- 了解基于 capacitor 的移动端 andriod 和 ios 开发 ，熟悉 xcode，android studio的基本使用, ionic，vant等框架
-- 了解：i18n国际化, echart数据大屏可视化，hightlight，ace等在线代码编辑展示 ，threejs3d模型渲染，git代码管理，animate.css动画，pdfjs，videojs，hlsjs等文件视频处理，trackingjs面部识别，npm， yarn等相关包管理工具等多诸多开源库
-- 了解游览器相关原理，熟练f12调试工具，网络监控，性能监控，内存监控 ,md，vuepress，vitepress等撰写并为维护开发文档
-- 了解nodejs 全栈开发，express,koa ，mysql及sequelize，熟悉redis的缓存优化 , linux 服务器的基本使用
-- 了解 vscode ，git ， apifox , vconsole 等调试测试工具 ,navicat 等常用开发工具
-
-<br>
-
-<h1>工作及项目经历</h1>
-
-**公司：** 大连快学教育软件开发公司 &emsp;&emsp; **职位：** 前端研发 &emsp;&emsp;**时间：** 2023.3 -2024.2
-<br/>
-
-**项目简介：** 在线教育培训平台，供学校学生线上课程及考试及企业 , 前后台+移动端
-
-**技术栈：**  vue2 ts全家桶 , ant-design , jquery ，echartsjs  ，qrcdoejs ，tracking.js ,acejs ,nicedit.js hls.js ,animate.css 
-
-**工作概述：**
-- 优化及完成其ui需求，优化其后端页面50+
-- 重估前台原php代码，改为vue脚手架架构 ，完成登录验证码，人脸识别，详情列表
-- 重构原项目旧富文本编辑器，拓展原功能，增加代码块的插入 ，代码高亮，增加用户体验 在试卷中实现0依赖建议富文本，增加简答题的用户体验
-- 配合客户端外包人员，将原 web 项目集成客户端
-- 通过重构php的方式解决其资源加载堆积引发的并发问题
-- 开发基于acejs和websocket的在线编程题
-- 修复其系统原有的诸多bug
-<br/>
-
----
-<br>
-
-**公司**： 大连倚天软件开发公司 &emsp;&emsp;**职位：** 前端研发 &emsp;&emsp;**时间：** 2021.6-2022.5
-<br/>
-**项目简介：** 多数为政务外包项目，有自研的低代码平台
-
-**技术栈：** vue2 ts全家桶 , element , jquery ，echartsjs ，threejs ,animate.css 
-
-**工作内容：** 
-- 配合开发组长开发公司政务办公系统，开发公司自用低代码平台 ，负责诸多基础组件的封装
-- 维护自用大屏数据可视化组件库 , 基于 echart , threejs 封装多种炫酷表格及地图组件 
-- 维护旧项目
-
-<br/>
+辽宁大连 ｜ 187 4253 9196 / 微信同号 ｜ jackieontheway666@gmail.com ｜ Github：https://github.com/chan-max ｜ 求职方向：前端开发 ｜ 五年工作经验 · 十年软件经验 ｜ 大连交通大学 · 本科 · 软件工程 & 信息系统
 
 ---
 
-<br/>
+## 技术栈
 
-**公司:** 大连智明软件开发公司 （实习） &emsp;&emsp;**职位：** 实习软件研发 &emsp;&emsp;**时间：** 2020.12-2021.06 
+### 核心能力
 
-**技术栈**：angular + python + uipath + vbscript
+- JavaScript｜TypeScript｜Node.js｜Vue｜Nuxt｜Electron｜Python
+- 熟悉 前端 + 自动化 + 数据采集 跨领域融合开发
+- 能独立完成 Chrome 插件 / Electron / UniApp 小程序 落地
 
-**工作内容：**  
-- 参与维护其原angular前端项目，使用 python 处理excel文件数据，使用uipath进行网络爬虫爬取网站数据
+### 自动化 & 爬虫
 
-<br/>
+- JS 爬虫｜Pinterest / Sora / Google Arts 等图片站数据采集
+- 影刀、八爪鱼、RPA 工具，支持全流程自动化执行
+- 社交媒体自动化发布、数据整理整合、批量操作工具
 
-# 我的项目
+### 工程 & AI 助力开发
 
-**衣设网**
-
-**项目介绍：** 这是一个正在开发中的开放式服装设计和交易平台
-
-**代码：** https://github.com/chan-max/1s/tree/dev
-
-
-**技术栈:**  vue3全家桶 ，threejs ，axios ，nodejs ，koa， ts， sequelize，mysql，redis ，linux ，准本引入mongodb
-
-**核心功能：** 核心功能为基于threejs 和 3d建模的服装模型组合，pc 端用来建模，移动端用来查看和交易 ， 基本的登录注册用户管理，类抖音的无线滑动，点赞，评论转发功能，正在开发聊天发消息相关的功能, 预计会有积分系统，交易系统，和一些复杂的交互功能
+- Nuxt SEO 优化经验
+- 熟练使用 Cursor、Trae、Gemini 等 AI 辅助开发
+- 对 平面设计、字体、POD 模板视觉设计 有兴趣
 
 ---
 
-**crush**
+## 工作与项目经历
 
-**项目介绍：** 这是一个类似vue的视图框架
+### 大连恩鸣跨境电子商务 — 前端开发
 
-**代码：** https://github.com/chan-max/Crush
+**2025.02 - 至今**
+内部电商 ERP & 跨境电商自动化工具平台
+技术栈：Vue3 · TS · Node.js · Python · RPA · Photoshop 自动化 · 爬虫
 
-**技术栈：** 原生js 
+主要成果
 
-**基本功能：** vue的绝大部分功能，模版编译，虚拟dom，响应式渲染，生命周期钩子，条见渲染，列表渲染
+- 0→1 搭建内部 ERP 系统，负责架构与技术选型
+- 开发数据爬虫系统，实现跨电商平台采集 & 汇总分析
+- 设计 RPA 自动化流程：上品、发货、社媒发布 全流程机器人执行
+- 实现 Photoshop 素材库套图自动化，大幅提升设计效率
+- Temu、TikTok 24 小时无人值守上品系统
+- 营销与运营数据可视化（销量、渠道、SKU 维度分析）
+- 自动化流程优化，提高准确率与执行效率
 
-**技术亮点：** 基于css预处理语言模板的虚拟cssom，可以直接在css模板中使用 js 变量
+---
 
-<br>
+技术栈：Nuxt · Vue3 · TypeScript
 
-<h1>自我评价</h1>
+- 独立搭建多个跨境电商独立站，负责技术架构与前端开发
+- 站内 SEO：结构化数据、URL 规范化、站点地图
+- 技术 SEO：页面速度优化、移动端适配
+- 内容 SEO：关键词研究、长尾词布局、内容策略规划
 
-从大学开始了解web技术，学习web各种技术。对于web有着极高的热情，每天坚持学习web。
+---
 
-目前为止对于前端技术比较了解，但是正在学习web后端技术，目标是成为一名优秀的web全端工程师和移动端工程师。
+### 1s.design 衣设 — 设计服务平台（个人项目）
 
-拥有较强的学习能力和沟通能力，能够比较良好的和团队成员协同完成开发。
+全栈独立开发 · 0→1 产品架构
 
-自从事互联网行业工作以来，本人所掌握的知识和技术是通过自己不断的学习、实践、积累、总结这些过程后所得
+技术栈：Nuxt 4 · Vue 3 · NestJS · Electron · TypeScript · MySQL · Redis · Playwright · LangChain
 
-其中在公司任职期间熟练掌握了团队项目开发的工作流程并积累了相关的经验
+- Nuxt 4 前台站点：SSR/SSG、SEO 优化、i18n 国际化、响应式设计
+- Vue 3 管理后台：多平台电商发布（Temu / Amazon / 拼多多 / 1688 等 17+ 平台）、AI 图文生成、BPMN 工作流
+- Electron 桌面端：Playwright 浏览器自动化、Photoshop 自动化、Remotion 视频渲染、图片批处理
+- NestJS 后端：50+ 业务模块、LangChain AI 集成、WebSocket/WebRTC 实时通信、Docker CI/CD 部署
+
+---
+
+### 大连多麦德 — 前端开发
+
+**2024.02 - 2025.02**
+报价 ERP 系统
+技术栈：Vue3 · TS · Node.js · MySQL · Sequelize · Redis
+
+工作内容
+
+- 报价、订单、库存模块核心逻辑开发
+- 多维价格策略 & 批量报价能力
+- 设计报价单生成、审核、审批流程体系
+- 数据报表用于业务决策支持
+- 高并发数据查询与计算优化
+- 参与架构设计，提升扩展性与可维护性
+
+---
+
+### 大连快学教育软件开发公司 — 前端研发
+
+**2023.03 - 2024.02**
+在线教育培训与考试平台
+技术栈：Vue2 · TS · AntD · Echarts · WebSocket · AceJS · HLS
+
+项目成果
+
+- 主导前端技术框架搭建与选型
+- 重构旧 PHP 前端，解决高并发页面问题
+- 登录验证码、人脸识别、页面性能优化
+- 重构富文本编辑器：新增代码块、代码高亮
+- Web 项目客户端集成
+- 基于 AceJS + WebSocket 的在线编程题系统
+- 探索 AI 辅助命题逻辑
+
+---
+
+### 大连倚天软件 — 前端开发
+
+**2021.06 - 2022.12**
+政务办公系统 / 后台 / 低代码平台
+技术栈：Vue2 · Element · jQuery · ThreeJS · Echarts
+
+工作内容
+
+- 政务办公系统模块开发
+- 自研低代码平台基础组件封装
+- 多个政府官网（偏 UI ）
+- ThreeJS + Echarts 数据可视化大屏组件库
+
+---
+
+### 大连智明软件 — 实习软件研发
+
+**2020.12 - 2021.06**
+技术栈：Angular + Python + UiPath + VBScript
+
+- 维护 Angular 前端项目
+- Python 处理 Excel 文件
+- UiPath 网络爬虫
+
+---
+
+<p align="center" style="padding:10px 0;font-weight:bold;">
+感谢您的阅读，欢迎联系，一起聊聊技术、AI 与自动化 :)
+</p>
